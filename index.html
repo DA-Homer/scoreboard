@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<header>
+  <title>Scoreboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</header>
+<body>
+  <div class="wrapper">
+    <div class="structure-container">
+      <div class="content-container">
+        <div class="scoreboard-container">
+          <div class="scoreboard">
+            <h2 id="home-title" class="scoreboard-title">HOME</h2>
+            <div class="scoreboard-screen">
+              <p id="home-score" class="score-tracker">0</p>
+            </div>
+            <div class="btn-container">
+              <button id="add-one-home" class="score-btn">+ 1</button>
+              <button id="add-two-home" class="score-btn">+ 2</button>
+              <button id="add-three-home" class="score-btn">+ 3</button>
+            </div>
+          </div>
+          <div class="scoreboard">
+            <h2 id="away-title" class="scoreboard-title">AWAY</h2>
+            <div class="scoreboard-screen">
+              <p id="away-score" class="score-tracker">0</p>
+            </div>
+            <div class="btn-container">
+              <button id="add-one-away" class="score-btn">+ 1</button>
+              <button id="add-two-away" class="score-btn">+ 2</button>
+              <button id="add-three-away" class="score-btn">+ 3</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="new-game-btn">NEW GAME</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
