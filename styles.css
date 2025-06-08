@@ -13,6 +13,7 @@ body {
 .wrapper {
   display: flex;
   justify-content: space-around;
+  margin: 0 auto;
 }
 .structure-container {
   display: flex;
@@ -21,9 +22,10 @@ body {
   justify-content: center;
   max-width: 700px;
   min-width: 680px;
-  height: 400px;
+  height: auto;
   background-color: #19244d;
   border-radius: 10px;
+  margin-bottom: 25px;
 }
 
 .content-container {
@@ -112,4 +114,22 @@ body {
   height: 2.6rem;
   width: 82%;
   background-color: #3b7a03;
+}
+
+#winner-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 80%;
+  font-size: 3rem;
+  color: gold;
+  background-color: #ffffff;
+  border: 2.5px solid gold;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+#winner-msg.hidden {
+  display: none;
 }

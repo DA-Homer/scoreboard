@@ -1,10 +1,15 @@
 const homeScore = document.getElementById('home-score');
 const awayScore = document.getElementById('away-score');
+const winnerMsg = document.getElementById('winner-msg');
 
 let homeScoreCounter = 0;
 let awayScoreCounter = 0;
 
 const updateScore = (side, points) => {
+  if (homeScoreCounter >= 12 || awayScoreCounter >= 12) {
+    return;
+  }
+
   if (side === 'home') {
     homeScoreCounter += points;
     homeScore.textContent = homeScoreCounter;
@@ -13,6 +18,16 @@ const updateScore = (side, points) => {
     awayScore.textContent = awayScoreCounter;
   }
   leaderHighlight(homeScoreCounter, awayScoreCounter)
+
+  if (homeScoreCounter >= 12) {
+    winnerMsg.innerHTML += `<p>HOME WINS!</p>`;
+    winnerMsg.classList.remove('hidden');
+    return;
+  } else if (awayScoreCounter >= 12) {
+    winnerMsg.innerHTML += `<p>AWAY WINS!</p>`;
+    winnerMsg.classList.remove('hidden');
+    return;
+  }
 }
 
 const leaderHighlight = (homeScoreValue, awayScoreValue) => {
@@ -34,6 +49,8 @@ const newGame = () => {
   homeScore.textContent = homeScoreCounter;
   awayScore.textContent = awayScoreCounter;
   leaderHighlight(homeScoreCounter, awayScoreCounter);
+  winnerMsg.classList.add('hidden');
+  winnerMsg.innerHTML = '';
 };
 
 document.getElementById('add-one-home').addEventListener('click', () => updateScore('home', 1));
