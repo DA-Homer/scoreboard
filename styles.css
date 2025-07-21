@@ -54,6 +54,7 @@ body {
 .scoreboard-title {
   font-size: 3rem;
   margin-bottom: 10px;
+  padding-top: 0.4rem;
 }
 
 .scoreboard-screen {
